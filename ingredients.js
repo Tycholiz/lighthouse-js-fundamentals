@@ -1,22 +1,18 @@
-var ingredients = ["eggs", "milk", "flour", "sugar", "baking soda", "baking powder", "chocolate chips", "bananas"];
-
-// Write a while loop that prints out the contents of ingredients:
-let i = 0;
-while (i < ingredients.length) {
-  console.log(ingredients[i]);
-  i++;
+function lastIndexOf(arr, num) {
+  for (let i = arr.length - 1; i > 0; i++) {
+    if (num === arr[i]) {
+      return i;
+    } else if (arr.length = 0) {
+      return -1;
+    }
+    } else {
+      return -1;
+    }
+  }
 }
 
-// Write a for loop that prints out the contents of ingredients:
-for (let i = 0; i < ingredients.length; i++) {
-  console.log(ingredients[i]);
-}
-
-
-// Write any loop (while or for) that prints out the contents of ingredients backwards:
-var j = ingredients.length - 1;
-while (j > 0) {
-  console.log(ingredients[j]);
-  j--;
-}
-
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
+console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
+console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
+console.log(lastIndexOf([], 3), "=?", -1);
